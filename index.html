@@ -8,7 +8,14 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="app">{{myFirstData}}</div>
+    <div id="app">
+      <img :src="picture" alt="`${firstName} ${lastName}`" :class="gender" />
+      <h1>{{firstName}} {{lastName}}</h1>
+      <h3>Email: {{email}}</h3>
+      <button :class="gender" type="button" v-on:click="getUser()">
+        Get Random User
+      </button>
+    </div>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
